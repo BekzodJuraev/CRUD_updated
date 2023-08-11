@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CRUD</h1>
+{% for item in object_list %}
+{{item.user}}
+{{item.text}}
+<a href="{% url 'update' item.pk %}">UPDATE</a>|<a href="{% url 'delete' item.pk %}">DELETE</a>
+<br>
+{% endfor %}
+<br>
+<br>
+<a href="{% url 'create' %}">CREATE</a>
+<a href="{% url 'logout' %}">LOG OUT</a>
+</body>
+</html>
